@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: outfit;
+}
+/* Navbar css start */
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+::-webkit-scrollbar{
+  display: none;
+ 
+}
+
+a.active hr{
+    width: 50%;
+}
+
+a:hover hr{
+    display: block;
+  
+}
+
+
+
+/* Animation for Slide 1 */
+@keyframes slideTextAnimation1 {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  }
+  
+  .animate-slide-text-1 {
+    animation: slideTextAnimation1 3s ease-in-out infinite;
+    animation-delay: 4s; /* Delay before animation starts */
+  }
+  
+  /* Animation for Slide 2 */
+  @keyframes slideTextAnimation2 {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+  }
+  
+  .animate-slide-text-2 {
+    animation: slideTextAnimation2 3s ease-in-out infinite;
+    animation-delay: 4s; /* Delay before animation starts */
+  }
+  
+  /* Animation for Slide 3 */
+  @keyframes slideTextAnimation3 {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slide-text-3 {
+    animation: slideTextAnimation3 3s ease-in-out infinite;
+    animation-delay: 3s; /* Delay before animation starts */
+  }
+  
+  /* Animation for Slide 4 */
+@keyframes slideTextAnimation4 {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-slide-text-4 {
+    animation: slideTextAnimation4 3s ease-in-out infinite;
+    animation-delay: 3s; /* Delay before animation starts */
+  }
+  
+  
+  
+/* Navbar css start */
+
+
+/* menu bar */
+@media(max-width:640px){
+  a.active{
+    background-color: black;
+    color: white;
+  }
+}
