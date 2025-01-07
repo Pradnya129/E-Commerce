@@ -20,7 +20,7 @@ const RelatedProducts = ({category , subCategory}) => {
      
   return (
     <div className='my-24'>
-    <div className='text-center max-[400px]:text-[22px]  sm:text-3xl py-8'>
+    <div className='text-center max-[400px]:text-[22px] text-3xl  sm:text-3xl py-8'>
         <Text text1 ={'RELATED'} text2={'PRODUCTS'} />
         
     </div>
