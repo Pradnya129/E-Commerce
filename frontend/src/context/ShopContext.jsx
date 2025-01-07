@@ -46,7 +46,7 @@ const [token,setToken]=useState('')
 
   } catch (error) {
     console.log(error)
-    toast.error(error.messageyn)
+    toast.error(error.message)
     
   }
  }
@@ -61,7 +61,8 @@ const [token,setToken]=useState('')
     }
 
   } catch (error) {
-    
+    console.log(error)
+    toast.error(error.message)
   }
  }
 
@@ -77,7 +78,8 @@ const [token,setToken]=useState('')
            console.log(cartItems[items][item])
         }
       }catch(error){
-
+        console.log(error)
+        toast.error(error.message)
       }
     }
   }
@@ -95,7 +97,8 @@ const [token,setToken]=useState('')
           totalAmount += itemInfo.price *  cartItems[items][item]
         }
       }catch(error){
-
+        console.log(error)
+        toast.error(error.message)
       }
     }
 
@@ -107,8 +110,17 @@ const updateQuantity = async (itemId,size,quantity) =>{
   let  cartData = structuredClone(cartItems);
 
   cartData[itemId][size] = quantity;
-
   setCartItems(cartData)
+
+  if(token){
+    try {
+      
+      await axios.post(backendUrl + '/api/cart/update',{itemId,size,quantity},{headers:{token}})
+    } catch (error) {
+      console.log(error)
+    toast.error(error.message)
+    }
+  }
 }
 
 const getProductData = async () => {

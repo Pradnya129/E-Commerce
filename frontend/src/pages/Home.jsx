@@ -4,11 +4,11 @@ import LatestCollection from '../components/LatestCollection'
 import BestSeller from '../components/BestSeller'
 import OurPolicy from '../components/OurPolicy'
 import NewsletterBox from '../components/NewsletterBox'
+import { ToastContainer } from 'react-toastify'
 
 const Home = () => {
   return (
     <div>
-      
       <Hero/>
       <LatestCollection/>
       <BestSeller/>

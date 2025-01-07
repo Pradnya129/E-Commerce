@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import { BrowserRouter,Routes,Route, useNavigate } from 'react-router-dom'
+import {Routes,Route, useNavigate } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Cart from './pages/Cart'
@@ -13,6 +13,7 @@ import Footer from './components/Footer'
 import SearchBar from './components/SearchBar'
 import Product from './pages/Product'
 import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify'
 import { ShopContext } from './context/ShopContext'
 
