@@ -82,7 +82,7 @@ const logout=()=>{
         </Link>
         </>
            }
-        <img onClick={()=>setVisible(true)} src={assets.menu_icon} alt="" className="w-5 cursor-pointer sm:hidden " />
+       { token && <img onClick={()=>setVisible(true)} src={assets.menu_icon} alt="" className="w-5 cursor-pointer sm:hidden " />}
       </div>
       {/* Sidebar menu for small screen */}
     <div className={`absolute top-0 right-0 z-50  ${visible?'w-full':'w-0'} overflow-hidden bottom-0  bg-white transition-all `}>
